@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+  background-repeat: no-repeat;
+  
+}
+/* BUTTONS */
+.button {
+  background-color: #C2A061; /* Yellow */
+  border: none;
+  color: white;
+  padding: 14px 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px 1px;
+  transition-duration: 0.4s;
+  cursor: pointer
+
+}
+
+.button1 {
+	background-color: #C2A061;
+	color: white; 
+    border: groove;
+	font-style: Jost;
+	padding: 14px 15px;
+	width:300px;
+	
+	} 
+	.button1:hover {
+  background-color: Green;
+  color: white;
+}
+.button:hover {
+  background-color: Green;
+  color: white;
+}
+.btn-group .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn-group .button:hover {
+  background-color: #3e8e41;
+}
+
+/* Style the header */
+.header {
+  background-color: White;
+  padding: 0px;
+  text-align: left;
+  font: Montagu slab;
+}
+
+div.sticky {
+  position: sticky;
+  top: 0;
+  padding: 1px;
+  transition-duration: 0.4s;
+  margin-right: 1px;
+ 
+}
+/* FONTS */
+p {
+  font-size: 24px;
+  font-style: Jost;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  margin-right: 36%;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+li a:hover {
+  background-color: #111;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: White;
+  transition-duration: 0.4s;
+  
+}
+
+li {
+  float: right;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #C2A061;
+}
+h2 {
+ font-style: "Jost";
+
+
+}
+h4 {
+  font-weight: normal;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+body {
+  margin: 0;
+  padding: 20px;
+   font-family: Jost, Montaga;
+}
+/* LONG HORIZONTAL BAR WITH IMAGE AND PRICE*/
+.checkout-container {
+  display: flex;
+  gap: 20px;
+}
+
+.left-section {
+  flex: 1;
+}
+
+.right-section {
+  flex: 1;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.product-item img {
+  width: 30px;
+  height: auto;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.product-price {
+  color: green;
+  font-weight: bold;
+}
+
+.summary {
+  margin-top: 20px;
+}
+
+.total-price {
+  color: green;
+  font-weight: bold;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.right-section h4 {
+  margin: 0;
+  color: green;
+}
+
+.subtext {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+}
+/* CODE FOR FORMING GRID */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+/* CODE FOR FORMING GRID */
+.form-grid input {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border:ridge;
+}
+/* atm icons */
+.card-icons img {
+  width: 40px;
+  margin-left: 25px;/* code para i adjust ang object from right to center and left*/
+}
+
+.confirm-details, .confirm {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  color: white;
+  background: #C2A061;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+	
