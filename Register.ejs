@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, intial-scale=1.0">
+<link rel="stylesheet" href="/stylesheets/Register.css">
+  <title>Login</title>
+  
+</head>
+<body>
+    <!-- CODE FOR HEADER -->
+<div class="header">
+<div class="sticky" button class="navigate-btn"><ul><!-- STICKY CODE  -->
+<img src="/img/homepage/Logo.png" alt="Alps">
+
+  <!-- CODE FOR HEADER -->
+
+<center><h1>Registration</h1></center>
+<form id="regForm" action="/Register" method="POST" onsubmit="return validateForm()">  <!-- IMPORTANT CODE FOR SQL REGISTRATION -->
+  <label for="fname">Full Name:</label>
+  <input type="text" id="fname" name="fname" required>
+
+  <label for="email">Email Address:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required minlength="6">
+
+  <label for="confirm">Confirm Password:</label>
+  <input type="password" id="confirm" name="confirm" required>
+
+  <span id="errorMsg" class="error"></span>
+
+  <input type="submit" value="Register">
+
+    <div class="register-link">
+    Already have an account? <a onclick="window.location.href='/Login'">Login</a>
+  </div>
+</form>
+</form>
+
+
+<script>
+  function validateForm() {
+    const pwd = document.getElementById("password").value;
+    const confirmPwd = document.getElementById("confirm").value;
+    const errorMsg = document.getElementById("errorMsg");
+
+    if (pwd !== confirmPwd) {
+      errorMsg.innerText = "Passwords do not match!";
+      return false;
+    }
+
+    errorMsg.innerText = "";
+    return true;
+  }
+</script>
+
+</body>
+</html>

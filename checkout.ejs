@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, intial-scale=1.0">
+<link rel="stylesheet" href="/stylesheets/Checkout.css">
+<title>About us</title>
+<style>
+</style>
+</head>
+<body>
+
+<div class="header">
+<div class="sticky" button class="navigate-btn"><ul><!-- STICKY HEADER CODE -->
+<img src= '/img/homepage/Logo.png'">
+  <li><a href="#news">MORE</a></li>
+  <li><a href="#about">ABOUT US</a></li>
+  <li><a href="#about">MY CART</a></li>
+  <!-- NAVIGATE CODE TO ANOTHER HTML FILE -->
+   <li><a class= "link active" button class="navigate-btn" onclick="window.location.href='/home'">HOME</a></li>
+   
+</div>
+
+<div class="checkout-container">
+
+    <div class="left-section">
+      <h3>CHECK OUT</h3>
+
+      <div class="product-item">
+        <img src="/img/productfeatures/Beer.png" alt="Tiger Classic">
+        <div class="product-info">
+          <span class="product-name">Tiger Classic</span>
+          
+        </div>
+      </div>
+
+      <div class="summary">
+    <h3>QUANTITY :<strong><%= quantity %><br></strong></strong> SIZE : <strong><%= size %></strong></h3>
+      </div>
+
+      <button class="button button1""navigate-btn" onclick="window.location.href='cart'">CANCEL</button>
+      <button class="button button1""navigate-btn" onclick="window.location.href='cart'">ADD ORDER</button>
+    </div>
+    
+
+    <div class="right-section">
+      <h3>Confirm your Information</h3>
+      <p class="subtext">Confirm card and delivery information</p>
+
+      <!-- FORM VALIDATION PHP -->
+<?php
+// define variables and set to empty values
+$first_name = $last_name = $email = $address = $birthday = $mobile_number = $card_info = "";
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["first_name"])) {
+    $first_nameErr = "Name is required";// IF THERE IS NO ENTRY OF DATA MADETHIS CONDITION WILL OCCUR
+  } else {
+    $name = test_input($_POST["name"]); // IF THE ENTRY OF DATA IS AVAILABLE AND MADE IT WILL BE POSTED
+  }
+  
+  if (empty($_POST["last_name"])) {
+    $last_nameErr = "Lastname is required";
+  } else {
+    $email = test_input($_POST["email"]);
+  }
+    
+  if (empty($_POST["email"])) {
+    $email = "";
+  } else {
+    $website = test_input($_POST["email"]);
+  }
+
+  if (empty($_POST["address"])) {
+    $address = "";
+  } else {
+    $comment = test_input($_POST["address"]);
+  }
+
+  if (empty($_POST["birthday"])) {
+    $birthdayErr = "Birthday is required";
+  } else {
+    $birthday = test_input($_POST["birthday"]);
+  }
+}
+// REQUIRED FUNCTIONS OF THE DATA 
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+<!-- FORM VALIDATION PHP -->
+      <form method="POST" action="process.php"></form>
+      <div class="form-grid">
+        <input type="text" name="first_name" placeholder="First Name">
+        <input type="text" name="last_name" placeholder="Last Name">
+        <input type="email" name="email" placeholder="Email">
+        <input type="text" name="address" placeholder="Address">
+        <input type="text" name="mobile number" placeholder="Mobile number">
+        <input type="text" name="birthday" placeholder="Birthday">
+      </form>
+       
+        <div class="card-icons">
+          <img src="/img/checkout/Visa.png" alt="Visa">
+          <img src="/img/checkout/paypal.png" alt="PayPal">
+          <img src="/img/checkout/mastercard.jpg" alt="Mastercard">
+          <img src="/img/checkout/American.jfif" alt="Amex">
+        </div>
+        
+      <input type="text" name="card_info" placeholder="Card Information">
+      </div>
+      <br></br>
+      <!-- NAVIGATE BUTTON TO ANOTHER FILE -->
+	  <button class="button button1""navigate-btn" onclick="window.location.href='C:/Xaamp/htdocs/dashboard/HTML/BEER/Checkout/Checkout.html'">CONFIRM</button>
+      <button class="button1" onclick="window.location.href='/cart'">CANCEL</button>
+    </div>
+
+  </div>
+
+  
+
+</body>
+</html>
